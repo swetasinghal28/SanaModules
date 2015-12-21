@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    tools:context="org.sana.android.activity.AuthenticationActivity"
+    android:background="@drawable/main_background"
+    >
+
+    <ScrollView android:layout_weight="30"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView android:text="Email address(es):"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+            </TextView>
+            <EditText android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/emailadress"
+                android:textStyle="normal" style="@style/Widget.EditText.Light"
+                android:text="@string/email_example">
+            </EditText>
+            <TextView android:text="Patient ID:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/Patient_ID">
+            </TextView>
+            <EditText android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/patient_number"
+                android:textStyle="normal" style="@style/Widget.EditText.Light"
+                android:textCursorDrawable="@null"
+                android:cursorVisible="true"
+                >
+            </EditText>
+            <TextView android:text="Doctors Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:id="@+id/DoctorName"
+                android:textStyle="normal" style="@style/Widget.EditText.Light"
+                android:textCursorDrawable="@drawable/black_cursor">
+            </EditText>
+
+            <TextView android:text="Message to Doctor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+            <EditText android:layout_height="280dp"
+                android:layout_width="match_parent"
+                android:id="@+id/outmessage"
+                android:textStyle="normal" style="@style/Widget.EditText.Light"
+                android:hint="@string/Message_body">
+            </EditText>
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical"
+        android:layout_width="match_parent" android:layout_weight="200"
+        android:layout_height="fill_parent">
+        <Button android:text="Send Email" android:id="@+id/btn_SentEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </Button>
+    </LinearLayout>
+</LinearLayout>
+

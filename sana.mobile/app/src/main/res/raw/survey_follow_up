@@ -1,0 +1,32 @@
+<Procedure title="SCD Survey Follow-Up" author="Sana">
+    <Page>
+        <Element type="MULTI_SELECT" concept="FOLLOW UP RESULT" id="1" question="TYPE OF FEEDBACK" answer="" choices="SURVEY, INFORMATION"/>
+    </Page>
+    <Page>
+        <Element type="MULTI_SELECT" concept="RECOMMENDATION" id="2" question="Recommendation" answer="" choices="Give Feedback, Request further Information, Request Survey"/>
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria type="EQUALS" id="3" value="Request Survey"/>
+        </ShowIf>
+        <Element type="SELECT" id="4" concept="FOLLOW UP PERIOD" question="Follow-up in:" answer="" choices="3 days,1 week,2 weeks,1 month"/>
+        <Element type="ENTRY" id="5" concept="FOLLOW UP PERIOD" question="Other duration:" answer=""/>
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria type="EQUALS" id="6" value="Request Information"/>
+        </ShowIf>
+        <Element type="SELECT" id="7" concept="FOLLOW UP PERIOD" question="Follow-up in:" answer="" choices="3 days,1 week,2 weeks,1 month"/>
+        <Element type="ENTRY" id="8" concept="FOLLOW UP PERIOD" question="Other duration:" answer=""/>
+        <Element type="ENTRY" id="9" concept="COMMENTS" question="Other comments:" answer=""/>
+    </Page>
+    <Page>
+        <ShowIf>
+            <Criteria type="EQUALS" id="10" value="Give Feedback"/>
+        </ShowIf>
+        <Element type="ENTRY" id="11" concept="COMMENTS" question="Other comments:" answer=""/>
+    </Page>
+    <Page>
+        <Element type="GPS" id="12" concept="GPS" question="Record Your Position" answer=""/>
+    </Page>
+</Procedure>
